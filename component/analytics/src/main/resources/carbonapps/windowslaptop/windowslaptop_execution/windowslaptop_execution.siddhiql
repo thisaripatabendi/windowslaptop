@@ -1,0 +1,36 @@
+/* Enter a unique ExecutionPlan */
+@Plan:name('windowslaptop_execution')
+
+/* Enter a unique description for ExecutionPlan */
+-- @Plan:description('windowslaptop_execution')
+
+/* define streams/tables and write queries here ... */
+
+@Import('org.wso2.iot.windowslaptop:1.0.0')
+define stream windowslaptop (meta_owner string, meta_deviceId string, meta_time long, windowsbatterylevel float, windowsbatterystatus float, windowscpuusage float);
+
+@Export('org.wso2.iot.devices.windowsbatterylevel:1.0.0')
+define stream windowsbatterylevel (meta_owner string, meta_deviceType string, meta_deviceId string, meta_time long, windowsbatterylevel float);
+
+@Export('org.wso2.iot.devices.windowsbatterystatus:1.0.0')
+define stream windowsbatterystatus (meta_owner string, meta_deviceType string, meta_deviceId string, meta_time long, windowsbatterystatus float);
+
+@Export('org.wso2.iot.devices.windowscpuusage:1.0.0')
+define stream windowscpuusage (meta_owner string, meta_deviceType string, meta_deviceId string, meta_time long, windowscpuusage float);
+
+from windowslaptop
+select meta_owner, 'windowslaptop' as meta_deviceType, meta_deviceId, meta_time * 1000 as meta_time, windowsbatterylevel
+insert into windowsbatterylevel;
+
+from windowslaptop
+select meta_owner, 'windowslaptop' as meta_deviceType, meta_deviceId, meta_time * 1000 as meta_time, windowsbatterystatus
+insert into windowsbatterystatus;
+
+from windowslaptop
+select meta_owner, 'windowslaptop' as meta_deviceType, meta_deviceId, meta_time * 1000 as meta_time, windowscpuusage
+insert into windowscpuusage;
+
+
+
+
+

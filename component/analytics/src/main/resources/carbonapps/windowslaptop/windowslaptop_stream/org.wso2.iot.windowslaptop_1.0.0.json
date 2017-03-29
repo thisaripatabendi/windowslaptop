@@ -1,0 +1,17 @@
+{
+  "name": "org.wso2.iot.windowslaptop",
+  "version": "1.0.0",
+  "nickName": "windowslaptop",
+  "description": "Temperature data received from the windows laptop",
+  "metaData": [
+    {"name":"owner","type":"STRING"},
+    {"name":"deviceId","type":"STRING"},
+    {"name":"time","type":"LONG"}
+  ],
+  "payloadData": [
+    {"name": "windowsbatterylevel","type": "FLOAT"},
+    {"name": "windowsbatterystatus", "type": "FLOAT"},
+    {"name": "windowscpuusage", "type": "FLOAT"}
+  ]
+}
+
