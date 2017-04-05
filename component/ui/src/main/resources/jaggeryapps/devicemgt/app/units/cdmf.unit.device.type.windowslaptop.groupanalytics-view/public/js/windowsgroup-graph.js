@@ -170,8 +170,6 @@ function drawGraph_windowslaptop(from, to)
 
             }
 
-            // TODO - pick a one color for one device to show in all graphs
-
             series.push({
                 color: getRandomColor(),
                 data: device,

@@ -18,7 +18,7 @@
   -->
 
 <artifacts>
-    <artifact name="laptop" version="1.0.0" type="carbon/application">
+    <artifact name="windowslaptop" version="1.0.0" type="carbon/application">
         <dependency artifact="windowslaptop_stream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="windowslaptop_receiver" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="windowslaptop_execution" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
