@@ -214,11 +214,11 @@ class DataReaderThread(object):
                     # generate random values
                     generateRandoms()
 
-                print "@@@@@@@@@@@@@ DATA READINGS @@@@@@@@@@@@@@@@"
-                print 'BATTERY LEVEL : ' + str(iotUtils.BATTERY_LEVEL)
-                print 'BATTERY STATUS : ' + str(iotUtils.BATTERY_STATUS)
-                print 'CPU USAGE : ' + str(iotUtils.CPU_USAGE)
-                print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                #print "@@@@@@@@@@@@@ DATA READINGS @@@@@@@@@@@@@@@@"
+                #print 'BATTERY LEVEL : ' + str(iotUtils.BATTERY_LEVEL)
+                #print 'BATTERY STATUS : ' + str(iotUtils.BATTERY_STATUS)
+                #print 'CPU USAGE : ' + str(iotUtils.CPU_USAGE)
+                #print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
             except Exception, e:
                 print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
